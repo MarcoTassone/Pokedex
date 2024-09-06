@@ -10,13 +10,29 @@ function Index(){
         </div>
 
         <div className="right-side">
-          <div className="search-bar">
-            <input type="text" placeholder="Search Pokemon" />
+          <div className="inside-border">
+            <div className="inside-inside-background">
+              <div className="search-bar">
+                <input type="text" placeholder="Search Pokémon" />
+              </div>
+              <div className="button-grid">
+                <div className="button"></div>
+                <div className="button"></div>
+                <div className="button"></div>
+                <div className="button"></div>
+                <div className="button"></div>
+                <div className="button"></div>
+                <div className="button"></div>
+                <div className="button"></div>
+                <div className="button"></div>
+                <div className="button"></div>
+              </div>
+            </div>
           </div>
 
-          <div className="button-grid">
+          
 
-          </div>
+          
 
           <div className="circle-top"></div>
         </div>
