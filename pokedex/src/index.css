@@ -7,6 +7,10 @@
 
 :root{
   color-scheme: light dark;
+  --clr-buttons-right: rgb(69, 168, 249);
+  --clr-pokedex: rgb(214, 44, 53);
+  --clr-screens: rgb(14, 10, 10);
+  --clr-yellow-led: rgb(241, 193, 88);
 }
 
 .body{

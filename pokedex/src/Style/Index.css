@@ -6,26 +6,27 @@
 }
 
 .left-side{
-  min-width: 30%;
+  min-width: 25%;
   height: 95vh;
-  background-color: red;
+  background-color: var(--clr-pokedex);
   border-top-left-radius: 10%;
   border-bottom-left-radius: 10%;
 }
 
 .right-side{
   position: relative;
-  border: 1px solid #121212;
-  min-width: 30%;
+  border: 1px solid var(--clr-screens);
+  min-width: 25%;
   height: 85vh;
   padding: .3rem;
-  background-color: red;
+  margin-top: 5.5rem;
+  background-color: var(--clr-pokedex);
   clip-path: polygon( 35.489% 0%,35.489% 0%,35.89% 0.008%,36.289% 0.032%,36.685% 0.072%,37.076% 0.128%,37.461% 0.2%,37.84% 0.286%,38.212% 0.388%,38.576% 0.505%,38.93% 0.636%,39.274% 0.782%,58.269% 9.367%,58.269% 9.367%,58.614% 9.512%,58.968% 9.644%,59.332% 9.761%,59.704% 9.862%,60.083% 9.949%,60.468% 10.02%,60.859% 10.076%,61.255% 10.116%,61.654% 10.14%,62.055% 10.149%,98.596% 10.149%,98.596% 10.149%,98.824% 10.161%,99.04% 10.199%,99.241% 10.259%,99.425% 10.34%,99.589% 10.439%,99.729% 10.554%,99.843% 10.684%,99.928% 10.826%,99.982% 10.978%,100% 11.139%,100% 99.01%,100% 99.01%,99.982% 99.17%,99.928% 99.323%,99.843% 99.465%,99.729% 99.595%,99.589% 99.71%,99.425% 99.809%,99.241% 99.889%,99.04% 99.95%,98.824% 99.987%,98.596% 100%,0% 100%,0% 54.208%,0% 0%,35.489% 0% );
 }
 
 .inside-border{
   clip-path: polygon( 34.057% 0%,34.057% 0%,34.542% 0.01%,35.025% 0.039%,35.504% 0.088%,35.978% 0.156%,36.447% 0.243%,36.909% 0.349%,37.364% 0.473%,37.81% 0.616%,38.247% 0.777%,38.674% 0.956%,58.434% 9.776%,58.434% 9.776%,58.775% 9.919%,59.124% 10.048%,59.482% 10.163%,59.845% 10.262%,60.215% 10.347%,60.59% 10.416%,60.97% 10.471%,61.353% 10.51%,61.739% 10.533%,62.127% 10.541%,98.217% 10.541%,98.217% 10.541%,98.456% 10.556%,98.683% 10.599%,98.895% 10.669%,99.088% 10.761%,99.26% 10.875%,99.408% 11.008%,99.528% 11.157%,99.617% 11.321%,99.673% 11.496%,99.693% 11.681%,99.693% 98.86%,99.693% 98.86%,99.673% 99.045%,99.617% 99.221%,99.528% 99.384%,99.408% 99.533%,99.26% 99.666%,99.088% 99.78%,98.895% 99.873%,98.683% 99.942%,98.456% 99.985%,98.217% 100%,1.783% 100%,1.783% 100%,1.544% 99.985%,1.317% 99.942%,1.105% 99.873%,0.912% 99.78%,0.74% 99.666%,0.592% 99.533%,0.472% 99.384%,0.383% 99.221%,0.327% 99.045%,0.307% 98.86%,0.307% 50.142%,0.307% 1.14%,0.307% 1.14%,0.327% 0.955%,0.383% 0.779%,0.472% 0.616%,0.592% 0.467%,0.74% 0.334%,0.912% 0.22%,1.105% 0.127%,1.317% 0.058%,1.544% 0.015%,1.783% 0%,34.057% 0% );
-  background-color: #121212;
+  background-color: var(--clr-screens);
   width: 100%;
   height: 83.5vh;
   padding: .2rem;
@@ -37,11 +38,11 @@
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 2fr) 1fr repeat(3, 2fr) 1fr 2fr;
+  grid-template-rows: repeat(2, 2fr) 1fr repeat(2, 2fr) 1fr 2fr 1fr 2fr;
   width: 100%;
   height: 82.9vh;
   clip-path: polygon( 34.057% 0%,34.057% 0%,34.542% 0.01%,35.025% 0.039%,35.504% 0.088%,35.978% 0.156%,36.447% 0.243%,36.909% 0.349%,37.364% 0.473%,37.81% 0.616%,38.247% 0.777%,38.674% 0.956%,58.434% 9.776%,58.434% 9.776%,58.775% 9.919%,59.124% 10.048%,59.482% 10.163%,59.845% 10.262%,60.215% 10.347%,60.59% 10.416%,60.97% 10.471%,61.353% 10.51%,61.739% 10.533%,62.127% 10.541%,98.217% 10.541%,98.217% 10.541%,98.456% 10.556%,98.683% 10.599%,98.895% 10.669%,99.088% 10.761%,99.26% 10.875%,99.408% 11.008%,99.528% 11.157%,99.617% 11.321%,99.673% 11.496%,99.693% 11.681%,99.693% 98.86%,99.693% 98.86%,99.673% 99.045%,99.617% 99.221%,99.528% 99.384%,99.408% 99.533%,99.26% 99.666%,99.088% 99.78%,98.895% 99.873%,98.683% 99.942%,98.456% 99.985%,98.217% 100%,1.783% 100%,1.783% 100%,1.544% 99.985%,1.317% 99.942%,1.105% 99.873%,0.912% 99.78%,0.74% 99.666%,0.592% 99.533%,0.472% 99.384%,0.383% 99.221%,0.327% 99.045%,0.307% 98.86%,0.307% 50.142%,0.307% 1.14%,0.307% 1.14%,0.327% 0.955%,0.383% 0.779%,0.472% 0.616%,0.592% 0.467%,0.74% 0.334%,0.912% 0.22%,1.105% 0.127%,1.317% 0.058%,1.544% 0.015%,1.783% 0%,34.057% 0% );
-  background-color: red;
+  background-color: var(--clr-pokedex);
   margin: 0 auto;
   padding: 5.5rem 1rem 1rem 1rem;
 }
@@ -58,7 +59,7 @@
   height: 100%;
   border: none;
   outline: none;
-  background-color: #121212;
+  background-color: var(--clr-screens);
   color: #fff;
   font-size: 1.5rem;
 }
@@ -66,16 +67,99 @@
 .button-grid{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  border: 1px solid #121212;
+  border: 1px solid var(--clr-screens);
   grid-column: 1/6;
   grid-row: 4/6;
   width: 100%;
   height: 100%;
-  background-color: aqua;
+  background-color: var(--clr-buttons-right);
 }
 
 .button{
-  border: 1px solid #121212;
+  border: 1px solid var(--clr-screens);
   width: 100%;
   height: auto;
+}
+
+.lines{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: .5rem;
+  grid-column: 4/6;
+  grid-row: 6/7;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-pokedex);
+}
+
+.lines .line{
+  width: 50%;
+  height: .5rem;
+  background-color: var(--clr-screens);
+  border-radius: 1rem;
+}
+
+.button-grid-white{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--clr-screens);
+  grid-column: 1/3;
+  grid-row: 7/8;
+  width: 100%;
+  height: 100%;
+}
+
+.white-button{
+  border: 1px solid var(--clr-screens);
+  width: 100%;
+  height: auto;
+  background-color: rgb(254, 244, 253);
+}
+
+.container-yellow-circle{
+  grid-column: 5/5;
+  grid-row: 7/7;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.yellow-circle{
+  grid-column: 5/5;
+  grid-row: 7/7;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: var(--clr-yellow-led);
+}
+
+.container-rectangles{
+  grid-column: 1/6;
+  grid-row: 9/9;
+  gap: 5.3rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.rectangle-left{
+  grid-column: 1/6;
+  background-color: var(--clr-screens);
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
+}
+
+.rectangle-right{
+  grid-column: 5/5;
+  background-color: var(--clr-screens);
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
 }
