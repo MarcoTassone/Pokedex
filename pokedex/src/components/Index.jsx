@@ -6,12 +6,15 @@ function Index(){
       <div className="container">
 
         <div className="left-side">
-          
+          <div className="top-layer"></div>
+          <div className="inside-left-border">
+            <div className="inside-inside-left-background"></div>
+          </div>
         </div>
 
         <div className="right-side">
-          <div className="inside-border">
-            <div className="inside-inside-background">
+          <div className="inside-right-border">
+            <div className="inside-inside-right-background">
               <div className="search-bar">
                 <input type="text" placeholder="Search Pokémon" />
               </div>
