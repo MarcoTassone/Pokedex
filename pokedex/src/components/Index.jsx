@@ -6,9 +6,31 @@ function Index(){
       <div className="container">
 
         <div className="left-side">
-          <div className="top-layer"></div>
+          <div className="top-layer-border">
+            <div className="top-layer-red">
+              <div className="border-blue-led">
+                <div className="big-blue-led"></div>
+              </div> 
+              <div className="stoplight">
+                <div className="circles"></div>
+                <div className="circles"></div>
+                <div className="circles"></div>  
+              </div> 
+            </div>
+            </div>       
           <div className="inside-left-border">
-            <div className="inside-inside-left-background"></div>
+            <div className="inside-inside-left-background">
+              <div className="top-circles">
+                <div className="red-circle"></div>
+                <div className="red-circle"></div>
+              </div>
+              <div className="container-red-button">
+                <div className="red-button"></div>
+              </div>
+              <div className="border-display">
+                <div className="display"></div>
+              </div>
+            </div>
           </div>
         </div>
 

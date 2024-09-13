@@ -9,8 +9,11 @@
   color-scheme: light dark;
   --clr-buttons-right: rgb(69, 168, 249);
   --clr-pokedex: rgb(214, 44, 53);
-  --clr-screens: rgb(14, 10, 10);
+  --clr-searchbar-and-display: rgb(14, 10, 10);
   --clr-yellow-led: rgb(241, 193, 88);
+  --clr-blue-led: rgb(104, 192, 223);
+  --clr-green-led: rgb(59, 196, 64);
+  --clr-border-display-and-buttons: rgb(230, 232, 220);
 }
 
 .body{
