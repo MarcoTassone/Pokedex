@@ -27,11 +27,30 @@ function Index(){
               <div className="container-red-button">
                 <div className="red-button"></div>
               </div>
+              <div className="container-speaker">
+                <div className="speaker">
+                  <div className="speaker-lines"></div>
+                  <div className="speaker-lines"></div>
+                  <div className="speaker-lines"></div>
+                  <div className="speaker-lines"></div>
+                </div>
+              </div>
               <div className="border-display">
                 <div className="display"></div>
               </div>
+              
+              <div className="container-black-button">
+                <div className="black-button"></div>
+              </div>
+
+              <div className="container-lines">
+                <div className="red-line"></div>
+                <div className="blue-line"></div>
+              </div>
             </div>
           </div>
+
+          
         </div>
 
         <div className="right-side">

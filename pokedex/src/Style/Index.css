@@ -93,7 +93,7 @@
 .inside-inside-left-background{
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(6, 1fr) repeat(2, 2fr);
+  grid-template-rows: repeat(5, 1fr) .5fr repeat(3, 1fr);
   background-color: var(--clr-pokedex);
   clip-path: polygon( 65.943% 0%,65.943% 0%,65.458% 0.01%,64.975% 0.039%,64.496% 0.088%,64.022% 0.156%,63.553% 0.243%,63.091% 0.349%,62.636% 0.473%,62.19% 0.616%,61.753% 0.777%,61.326% 0.956%,39.852% 10.541%,1.414% 10.541%,1.414% 10.541%,1.235% 10.552%,1.065% 10.585%,0.906% 10.637%,0.761% 10.706%,0.632% 10.792%,0.521% 10.891%,0.431% 11.003%,0.364% 11.126%,0.322% 11.257%,0.307% 11.396%,0.307% 99.145%,0.307% 99.145%,0.322% 99.284%,0.364% 99.415%,0.431% 99.538%,0.521% 99.65%,0.632% 99.75%,0.761% 99.835%,0.906% 99.905%,1.065% 99.956%,1.235% 99.989%,1.414% 100%,98.586% 100%,98.586% 100%,98.765% 99.989%,98.936% 99.956%,99.094% 99.905%,99.239% 99.835%,99.368% 99.75%,99.479% 99.65%,99.569% 99.538%,99.636% 99.415%,99.678% 99.284%,99.693% 99.145%,99.693% 50.142%,99.693% 1.14%,99.693% 1.14%,99.673% 0.955%,99.617% 0.779%,99.528% 0.616%,99.408% 0.467%,99.26% 0.334%,99.088% 0.22%,98.895% 0.127%,98.683% 0.058%,98.456% 0.015%,98.217% 0%,65.943% 0% );
   padding-top: 6rem;
@@ -115,6 +115,7 @@
   clip-path: polygon( 0% 2.165%,0% 2.165%,0.028% 1.813%,0.109% 1.48%,0.239% 1.17%,0.412% 0.886%,0.626% 0.634%,0.875% 0.418%,1.155% 0.242%,1.461% 0.11%,1.79% 0.028%,2.137% 0%,97.863% 0%,97.863% 0%,98.21% 0.028%,98.539% 0.11%,98.845% 0.242%,99.125% 0.418%,99.374% 0.634%,99.588% 0.886%,99.761% 1.17%,99.891% 1.48%,99.972% 1.813%,100% 2.165%,100% 97.835%,100% 97.835%,99.972% 98.187%,99.891% 98.52%,99.761% 98.83%,99.588% 99.114%,99.374% 99.366%,99.125% 99.582%,98.845% 99.758%,98.539% 99.89%,98.21% 99.972%,97.863% 100%,11.628% 100%,11.628% 100%,11.047% 99.973%,10.476% 99.894%,9.918% 99.765%,9.375% 99.586%,8.851% 99.359%,8.349% 99.086%,7.872% 98.769%,7.423% 98.408%,7.006% 98.005%,6.622% 97.563%,1.405% 90.956%,1.405% 90.956%,1.144% 90.603%,0.909% 90.234%,0.7% 89.851%,0.517% 89.456%,0.361% 89.049%,0.233% 88.633%,0.132% 88.208%,0.059% 87.777%,0.015% 87.34%,0% 86.9%,0% 2.165% );
   width: 70%;
   height: 70%;
+  margin-bottom: 1rem;
   background-color: var(--clr-searchbar-and-display);
 }
 
@@ -138,16 +139,76 @@
   background-color: var(--clr-pokedex);
 }
 
-.red-button{
+.container-red-button{
   display: grid;
   place-items: center;
   grid-column: 3/3;
   grid-row: 5/5;
   z-index: 1;
+  margin-top: .3rem;
+}
+
+.red-button{
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: var(--clr-pokedex);
+}
+
+.container-speaker{
+  grid-column: 6/6;
+  grid-row: 5/5;
+  z-index: 1;
+}
+
+.speaker{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: .2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.speaker-lines{
+  width: 100%;
+  height: 2px;
+  background-color: var(--clr-searchbar-and-display);
+}
+
+.container-black-button{
+  display: flex;
+  justify-content: center;
+  grid-column: 1/3;
+  grid-row: 7/7;
+}
+
+.black-button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.container-lines{
+  display: flex;
+  justify-content: space-between;
+  grid-column: 3/5;
+  grid-row: 7/7;
+}
+
+.red-line{
+  width: 45%;
+  height: 3px;
+  border-radius: 1rem;
+  background-color: var(--clr-red-line);
+}
+
+.blue-line{
+  width: 45%;
+  height: 3px;
+  border-radius: 1rem;
+  background-color: var(--clr-buttons-right);
 }
 
 .right-side{
