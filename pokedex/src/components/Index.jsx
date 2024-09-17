@@ -47,6 +47,16 @@ function Index(){
                 <div className="red-line"></div>
                 <div className="blue-line"></div>
               </div>
+
+              <div className="container-pad">
+                <div className="pad">
+                  <div className="center-circle"></div>
+                </div>
+              </div>
+
+              <div className="container-green-screen">
+                <div className="green-screen"></div>
+              </div>
             </div>
           </div>
 
