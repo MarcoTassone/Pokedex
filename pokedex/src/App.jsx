@@ -1,10 +1,14 @@
-import Index from "./components/Index"
-import "./Style/Index.css"
+import Pokedex from "./components/Pokedex"
+import "./Style/Pokedex.css"
+import FetchPokeApi from "./components/FetchPokeApi"
 function App() {
 
   return (
     <>
-     <Index/>
+     <Pokedex/>
+     <div className="App">
+      <FetchPokeApi/>
+     </div>
     </>
   )
 }

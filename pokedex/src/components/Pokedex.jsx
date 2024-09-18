@@ -1,6 +1,39 @@
+import { useEffect, useState } from 'react';
+
 function Index(){
-  
-  
+
+  const [pokemon, setPokemon] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchPokemon = async (name) => {
+      try {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        const pokemonData = [];
+        for (const poke of data.results) {
+          const pokeResponse = await fetch(poke.url);
+          const pokeData = await pokeResponse.json();
+          pokemonData.push(pokeData);
+        }
+        setPokemon(pokemonData);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPokemon();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
   return (
     <>
       <div className="container">
@@ -17,7 +50,7 @@ function Index(){
                 <div className="circles"></div>  
               </div> 
             </div>
-            </div>       
+            </div>
           <div className="inside-left-border">
             <div className="inside-inside-left-background">
               <div className="top-circles">
@@ -36,7 +69,9 @@ function Index(){
                 </div>
               </div>
               <div className="border-display">
-                <div className="display"></div>
+                <div className="display">
+                  <img src={poke.sprites.front_default} alt={poke.name} />
+                </div>
               </div>
               
               <div className="container-black-button">
@@ -67,7 +102,10 @@ function Index(){
           <div className="inside-right-border">
             <div className="inside-inside-right-background">
               <div className="search-bar">
-                <input type="text" placeholder="Search Pokémon" />
+                <input type="text"
+                  placeholder="Search Pokémon"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)} />
               </div>
               <div className="button-grid">
                 <div className="button"></div>
