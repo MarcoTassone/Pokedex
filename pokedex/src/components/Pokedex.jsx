@@ -1,26 +1,23 @@
 import { useEffect, useState } from 'react';
 
-function Index(){
+function Pokedex(){
 
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchedPokemon, setSearchedPokemon] = useState('');
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchPokemon = async (name) => {
+    const fetchPokemon = async () => {
       try {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=151`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        const pokemonData = [];
-        for (const poke of data.results) {
-          const pokeResponse = await fetch(poke.url);
-          const pokeData = await pokeResponse.json();
-          pokemonData.push(pokeData);
-        }
-        setPokemon(pokemonData);
+        setPokemon(data.results); // Store only the results array
+        setLoading(false);
       } catch (error) {
         setError(error.message);
       } finally {
@@ -30,6 +27,24 @@ function Index(){
 
     fetchPokemon();
   }, []);
+
+  const searchPokemon = async () => {
+    if (!searchTerm) {
+      setSearchedPokemon(null);
+      return;
+    }
+    try {
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${searchTerm.toLowerCase()}`);
+      if (!response.ok) {
+        throw new Error('Pokémon not found');
+      }
+      const data = await response.json();
+      setSearchedPokemon(data);
+    } catch (error) {
+      setError(error.message);
+      setSearchedPokemon(null);
+    }
+  };
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -69,9 +84,11 @@ function Index(){
                 </div>
               </div>
               <div className="border-display">
-                <div className="display">
-                  <img src={poke.sprites.front_default} alt={poke.name} />
+                {searchedPokemon && (
+                  <div className="display">
+                  <img src={searchedPokemon.sprites.front_default} alt={searchedPokemon.name} />
                 </div>
+                )}
               </div>
               
               <div className="container-black-button">
@@ -105,7 +122,8 @@ function Index(){
                 <input type="text"
                   placeholder="Search Pokémon"
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)} />
+                  onChange={(e) => setSearchTerm(e.target.value)} 
+                  onSubmit={searchPokemon}/>
               </div>
               <div className="button-grid">
                 <div className="button"></div>
@@ -144,4 +162,4 @@ function Index(){
   )
 }
 
-export default Index;
+export default Pokedex;
